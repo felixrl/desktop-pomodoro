@@ -1,0 +1,161 @@
+/* FONTS */
+
+@font-face {
+    font-family: playfair;
+    src: url('../assets/fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: gabarito;
+    src: url('../assets/fonts/Gabarito-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: gabarito-light;
+    src: url('../assets/fonts/Gabarito-Regular.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    position: fixed; 
+    overflow: hidden;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #efefef;
+}
+
+.titlebar {
+    height: 30px;
+    background: rgba(22, 22, 22, 0.15);
+    
+    user-select: none;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /* cursor: grab; */
+}
+
+.titlebar-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.titlebar-button:hover {
+    background: #5bbec3;
+}
+
+/* CLOCK */
+
+#clock {
+    margin: 0;
+    padding: 0;
+
+    font-family: gabarito;
+    font-size: 128px;
+
+    color: #222222;
+}
+
+.paused {
+    /* background-color: #222222; */
+}
+
+.paused #clock {
+    color: rgba(22, 22, 22, 0.2);
+    /* color: #efefef; */
+}
+
+main {
+    text-align: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+}
+
+#controls {
+    position: fixed;
+    bottom: 20px;
+}
+
+#label {
+    margin-bottom: 15px;
+
+    font-family: gabarito-light;
+    font-size: 16px;
+    color: #222222;
+}
+
+button {
+    border: 2px solid #222222;
+    border-radius: 25px;
+
+    padding: 12px;
+    margin: 0px 1px 0px 1px;
+
+    box-shadow: none;
+    background-color: transparent;
+
+    font-family: gabarito-light;
+    font-size: 16px;
+    color: #222222;
+
+    transition-duration: 0.05s;
+    transition-timing-function: ease-in-out;
+}
+
+button:disabled {
+    border-style: dotted;
+    border-color: rgba(22, 22, 22, 0.2);
+    color: rgba(22, 22, 22, 0.2);
+
+    display: none;
+}
+
+button:hover:enabled {
+    transform: translateY(-2px);
+    /* color: #C46D00;
+    border-color: #C46D00; */
+    cursor: pointer;
+
+    background-color: #222222;
+    color: #efefef;
+}
+
+/* GRADIENT BACKGROUND */
+
+.gradient-background {
+    background: linear-gradient(300deg, #ffc161, #fff2de, #ffb38a);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

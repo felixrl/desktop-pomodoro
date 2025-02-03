@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desktop Pomodoro</title>
+
+    <script type="text/javascript" src="/scripts/timer.js" defer></script>
+    <script type="text/javascript" src="/scripts/app.js" defer></script>
+</head>
+
+<body>
+    <div data-tauri-drag-region class="titlebar"></div>
+
+    <main id="main" class="container">
+        <div id="clock">--:--</div>
+
+        <div id="controls">
+            <div id="label"></div>
+            <button onclick="startNext()" id="start-btn">Start</button>
+            <button onclick="skip()" disabled id="skip-btn">Skip</button>
+        </div>
+    </main>
+</body>
+
+</html>
